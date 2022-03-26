@@ -4,18 +4,18 @@
 }
 
 body {
-background-color: #1D232A;
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'icones', 'Helvetica Neue', sans-serif;
-color: #ffffff;
+  background-color: #1d232a;
+  font-family: 'Open Sans', 'icones', sans-serif;
+  color: #ffffff;
 }
 
-.cabecalho{
+.cabecalho {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #15191C;
-  padding: 8px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16) ;
+  background-color: #15191c;
+  padding: 8px 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
 }
 
 .cabecalho__menu i::before {
@@ -24,7 +24,7 @@ color: #ffffff;
 }
 
 .cabecalho__notificacao i::before {
-  content: "\e906";
+  content: '\e906';
   font-size: 24px;
 }
 
@@ -35,13 +35,23 @@ color: #ffffff;
 .menu-lateral {
   display: flex;
   flex-direction: column;
-  background-color: #15191C;
+  background-color: #15191c;
   width: 75vw;
   height: 100vh;
+  position: absolute;
+  left: -100vw;
+  transition: left .25s;
+  z-index: 99;
 }
 
+.menu-lateral--ativo {
+  left: 0;
+  transition: .25s;
+}
+
+
 .menu-lateral__logo {
-  width: 110px;
+  width: 118px;
   align-self: center;
   padding: 16px;
 }
@@ -52,13 +62,12 @@ color: #ffffff;
   padding-left: 64px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .menu-lateral__link--ativo {
   color: #ffffff;
   padding-left: 56px;
-  border-left: 8px solid #ffffff ;
+  border-left: 8px solid #FFFFFF ;
 }
 
 .menu-lateral__link::before {
@@ -93,3 +102,4 @@ color: #ffffff;
 .menu-lateral__link--pinturas::before {
   content: "\e90a";
 }
+
